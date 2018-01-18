@@ -1,0 +1,210 @@
+<div class="container-fluid">
+    <div class="well">
+        <h1><b>Bootstrap Text/Typography</b></h1>
+        <small>Better typographs when browser defaults</small>
+    </div>
+    <h1>Bootstrap's Default Settings</h1>
+    <p>Bootstrap's global default font-size is 14px, with a line-height of 1.428</p>
+    <p>This is applied to the <code>&lt;body&gt;</code> element and all paragraphs (<code>&lt;p&gt;</code>).</p>
+    <p>In addition, all <code>&lt;p&gt;</code> elements have a bottom margin that equals half their computed line-height (10px by default).</p>
+    <hr/>
+    <h1>Bootstrap vs. Browser Defaults</h1>
+    <p>In this chapter, we will look at some HTML elements that will be styled a little bit differently by Bootstrap than browser defaults.</p>
+    <hr/>
+    <h1>&lt;h1&gt; - &lt;h6&gt;</h1>
+    <p>By default, Bootstrap will style the HTML headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) in the following way:</p>
+    <br/>
+    <h1>h1 Bootstrap heading (36px)</h1>
+    <h2>h2 Bootstrap heading (30px)</h2>
+    <h3>h3 Bootstrap heading (24px)</h3>
+    <h4>h4 Bootstrap heading (18px)</h4>
+    <h5>h5 Bootstrap heading (14px)</h5>
+    <h6>h6 Bootstrap heading (12px)</h6>
+
+
+    <br/>
+    <h1>Boostrap heading with small element</h1>
+    <br/>
+
+    <h1>h1 Bootstrap heading <small>secondary text</small></h1>
+    <h2>h2 Bootstrap heading <small>secondary text</small></h2>
+    <h3>h3 Bootstrap heading <small>secondary text</small></h3>
+    <h4>h4 Bootstrap heading <small>secondary text</small></h4>
+    <h5>h5 Bootstrap heading <small>secondary text</small></h5>
+    <h6>h6 Bootstrap heading <small>secondary text</small></h6>
+    <br/>
+
+    <h1>mark</h1>
+    <p>Bootstrap will style the HTML "mark" element in the following way:</p>
+    <br/>
+    <p>Use the mark element to <mark>highlight</mark> text.</p>
+
+    <br/>
+    <h1>abbr</h1>
+    <p>Boostrap will style the HTML "abbr" element in the following way:</p>
+    <br/>
+    <p>The <abbr title="awesomeee">WHO</abbr> was founded in 1948.</p>
+    <p>abbr tag requires "title" attribute to be defined.</p>
+
+    <br/>
+    <h1>blockquote</h1>
+    <p>Bootstrap will style the HTML "blockquote" element in the following way:</p>
+    <blockquote class="blockquote">
+        <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+        <footer>From WWF's website</footer>
+    </blockquote>
+    <p>Reversed version:</p>
+    <blockquote class="blockquote-reverse">
+        <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+        <footer>From WWF's website</footer>
+    </blockquote>
+
+    <br/>
+    <h1>Description List</h1>
+    <p>The dl element indicates a description list: </p>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+    <br>
+    <h1>Code Snippets</h1>
+    <p>Bootstrap will style the HTML code element in the following way:</p>
+    <p>The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document.</p>
+
+    <br/>
+    <h1>Keyboard Inputs</h1>
+    <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+    <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+
+    <br/>
+    <h1>Multiple Code Lines</h1>
+    <p>For multiple lines of code, use the pre element:</p>
+    <pre>
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves,
+both    spaces and
+line breaks.
+</pre>
+    <p>In my case, this is not good for developers</p>
+    <p>It breaks our code-style rules.</p>
+
+    <br/>
+    <h1>Contextual Colors and Backgrounds</h1>
+    <p>Boostrap also has some contextual classes that can be used to provide "meaning through colors".</p>
+    <p>The classes for text colors are: <code>.text-muted</code>, <code>.text-primary</code>, <code>.text-success</code>, <code>.text-info</code>, <code>.text-warning</code>, and <code>.text-danger</code>:</p>
+    <blockquote>
+        <p class="text-muted">This text is muted.</p>
+        <p class="text-primary">This text is important.</p>
+        <p class="text-success">This text indicates success.</p>
+        <p class="text-info">This text represents some information.</p>
+        <p class="text-warning">This text represents a warning.</p>
+        <p class="text-danger">This text represents danger.</p>
+    </blockquote>
+    <p>The classes for background colors are: <code>.bg-primary</code>, <code>.bg-success</code>, <code>.bg-info</code>, <code>.bg-warning</code>, and<code>.bg-danger</code>:</p>
+    <blockquote>
+        <p class="bg-primary">This text is important.</p>
+        <p class="bg-success">This text indicates success.</p>
+        <p class="bg-info">This text represents some information.</p>
+        <p class="bg-warning">This text represents a warning.</p>
+        <p class="bg-danger">This text represents danger.</p>
+    </blockquote>
+    <br/>
+    <br/>
+    <h1>More Typography Classes</h1>
+    <p>The Bootstrap classes below can be added to style HTML elements further: </p>
+    <blockquote>
+        <h3>.lead</h3>
+        <p>Makes a paragraph stand out (none)</p>
+        <p class="lead">Makes a paragraph stand out</p>
+    </blockquote>
+    <blockquote>
+        <h3>.small</h3>
+        <p>Indicates smaller text (set to 85% of the size of the parent) (none)</p>
+        <p class="small">Indicates smaller text (set to 85% of the size of the parent)</p>
+    </blockquote>
+    <blockquote>
+        <h3>.text-left</h3>
+        <p>Indicates left-aligned text (none) (left-aligned text is default.)</p>
+        <p class="text-left">Indicates left-aligned text</p>
+    </blockquote>
+    <blockquote>
+        <h3>.text-center</h3>
+        <p>Indicates center-aligned text (none)</p>
+        <p class="text-center">Indicates center-aligned text</p>
+    </blockquote>
+    <blockquote>
+        <h3>.text-right</h3>
+        <p>Indicates right-aligned text (none)</p>
+        <p class="text-right">Indicates right-aligned text</p>
+    </blockquote>
+    <blockquote>
+        <h3>.text-justify</h3>
+        <p>Indicates justified text (none)</p>
+        <p class="text-justify">Indicates justified text. Indicates justified text. Indicates justified text</p>
+        <p class="small"><b>TIP:</b> Try to resize window to check justified text.</p>
+    </blockquote>
+    <blockquote>
+        <h3>.text-nowrap</h3>
+        <p>Indicates no wrap text (none)</p>
+        <p class="text-nowrap">Indicates no wrap text. ndicates no wrap text. ndicates no wrap text</p>
+        <p class="small"><b>TIP:</b> Try to resize window to check no-wrap text.</p>
+    </blockquote>
+    <blockquote>
+        <h3>.text-capitalize</h3>
+        <p>Indicates capitalized text</p>
+        <p class="text-capitalize">Indicates capticalized text</p>
+    </blockquote>
+    <blockquote>
+        <h3>.list-unstyled</h3>
+        <p>Removes the default list-style and left margin on list items (works on both <code>ul</code> and <code>ol</code>). This class only applies to immediate children list items (to remove the default list-style from any nested lists, apply this class to any nested lists as well)</p>
+        <p>default: </p>
+        <ul>
+            <li>Hello</li>
+            <li>Good bye</li>
+            <li>See you later</li>
+        </ul>
+        <p>unstyled: </p>
+        <ul class="list-unstyled">
+            <li>Hello</li>
+            <li>Good bye</li>
+            <li>See you later</li>
+        </ul>
+    </blockquote>
+    <blockquote>
+        <h3>.list-inline</h3>
+        <p>Places all list items on a single line</p>
+        <ul class="list-inline">
+            <li>Hello</li>
+            <li>Good bye</li>
+            <li>See you later</li>
+        </ul>
+    </blockquote>
+    <blockquote>
+        <h3>.dl-horizontal</h3>
+        <p>Lines up the terms (<code>dt</code>) and descriptions (<code>dd</code>) in <code>dl</code> elements side-by-side. Starts off like default <code>dl</code>s, but when the browser window expands, it will line up side-by-side</p>
+        <dl class="dl-horizontal">
+            <dt>Description title</dt>
+            <dd>Description data</dd>
+        </dl>
+    </blockquote>
+    <blockquote>
+        <h3>.pre-scrollable</h3>
+        <p>Makes a <code>pre</code> element scrollable</p>
+        <pre class="pre-scrollable" style="height: 100px">
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves,
+both    spaces and
+line breaks.
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves,
+both    spaces and
+line breaks.
+</pre>
+    </blockquote>
+</div>

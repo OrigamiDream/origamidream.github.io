@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="well">
+        <h1><b>Bootstrap Alerts</b></h1>
+        <small>A simple dynamic alert template</small>
+    </div>
+    <p>Bootstrap provides an easy way to create predefined alert messages:</p>
+    <p>Alerts are created with the <code>.alert</code> class, followed by one of the four contextual classes <code>.alert-success</code>, <code>.alert-info</code>, <code>.alert-warning</code> or <code>.alert-danger</code>:</p>
+    <blockquote>
+        <div class="alert alert-success">
+            <strong>Success!</strong> Indicates a successful or positive action.
+        </div>
+        <div class="alert alert-info">
+            <strong>Info!</strong> Indicates a enutral informative change or action.
+        </div>
+        <div class="alert alert-warning">
+            <strong>Warning!</strong> Indicates a warning that might need attention.
+        </div>
+        <div class="alert alert-danger">
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+    </blockquote>
+    <hr/>
+    <hr/>
+    <h1>Alert Links</h1>
+    <p>Add the <code>.alert-link</code> class to any links inside the alert box to create "matching colored links":</p>
+    <blockquote>
+        <div class="alert alert-success">
+            <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+        </div>
+        <div class="alert alert-info">
+            <strong>Info!</strong> You should <a href="#" class="alert-link">read this message</a>.
+        </div>
+        <div class="alert alert-warning">
+            <strong>Warning!</strong> You should <a href="#" class="alert-link">read this message</a>.
+        </div>
+        <div class="alert alert-danger">
+            <strong>Danger!</strong> You should <a href="#" class="alert-link">read this message</a>.
+        </div>
+    </blockquote>
+    <hr/>
+    <h1>Closing Alerts</h1>
+    <p>To close the alert message, add a <code>.alert-dismissable</code> class to the alert container. Then add <code>class="close"</code> and <code>data-dismiss="alert"</code> to a link or a button element (when you click on this the alert box will disappear).</p>
+    <div class="alert alert-success alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    <hr/>
+    <h1>Animated Alerts</h1>
+    <p>The <code>.fade</code> and <code>.in</code> classes adds a fading effect when closing the alert message:</p>
+    <div class="alert alert-danger fade in">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Danger!</strong> This removes with fading effects.
+    </div>
+</div>
