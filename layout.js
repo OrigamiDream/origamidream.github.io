@@ -37,7 +37,7 @@ let TYPOGRAPHYS = [
 let TYPOGRAPHYS_OPENED = false;
 
 let MENUS = [
-    new Menu("BG", function () {
+    new Menu("BG<br/>COL", function () {
         showBackgrounds()
     }),
     new Menu("TEXT<br/>COL", function () {
