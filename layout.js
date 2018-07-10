@@ -1,8 +1,8 @@
-var OPENED = false;
-var CONTENT_INDEX = 0;
-var CONTENTS = [];
+let OPENED = false;
+let CONTENT_INDEX = 0;
+let CONTENTS = [];
 
-var THREADS = [
+let THREADS = [
     "introduction.html",
     "grids.html",
     "typography.html",
@@ -13,14 +13,14 @@ var THREADS = [
     "dropdowns.html",
 ];
 
-var VISIBLE = true;
-var LAST_VISIBLE = "MENU";
-var RETURN_BACK = false;
+let VISIBLE = true;
+let LAST_VISIBLE = "MENU";
+let RETURN_BACK = false;
 
-var PICKERS = [];
-var PICKERS_OPENED = false;
+let PICKERS = [];
+let PICKERS_OPENED = false;
 
-var BACKGROUNDS = [
+let BACKGROUNDS = [
     new Background("FFFFFF", "#ffffff", null, null, null),
     new Background("FFD0BA", "#ffd0ba", null, null, null),
     new Background("A3CCA3", "#A3CCA3", null, null, null),
@@ -34,17 +34,17 @@ var BACKGROUNDS = [
     new Background("OrToWh", null, "orange-to-white", null, null),
     new Background("SbToWh", null, "skyblue-to-white", null, null)
 ];
-var BACKGROUNDS_OPENED = false;
+let BACKGROUNDS_OPENED = false;
 
-var TYPOGRAPHYS = [
+let TYPOGRAPHYS = [
     new Typography("Default", "black"),
     new Typography("Aqua", "aqua"),
     new Typography("Orange", "orange"),
     new Typography("Gray", "gray"),
 ]
-var TYPOGRAPHYS_OPENED = false;
+let TYPOGRAPHYS_OPENED = false;
 
-var MENUS = [
+let MENUS = [
     new Menu("BG<br/>COL", function () {
         showBackgrounds()
     }),
@@ -52,12 +52,12 @@ var MENUS = [
         showTypographys()
     }),
 ];
-var MENU_OPENED = true;
+let MENU_OPENED = true;
 
 function getCSSList() {
-    var arr = [];
-    for(var i = 0; i < BACKGROUNDS.length; i++) {
-        var background = BACKGROUNDS[i];
+    let arr = [];
+    for(let k = 0; k < BACKGROUNDS.length; k++) {
+        let background = BACKGROUNDS[k];
         if(background.getCSS() != null) {
             arr.push(background.getCSS());
         }
@@ -84,7 +84,7 @@ window.onload = function (event) {
 
 function setupReturn() {
     $(function () {
-        var returns = document.getElementById("return");
+        let returns = document.getElementById("return");
         $(returns).click(function () {
             if(!VISIBLE) {
                 return;
@@ -99,11 +99,11 @@ function setupReturn() {
 
 function setupSettings() {
     $(function () {
-        var settings = document.getElementById("setting-menu");
-        var children = settings.children;
-        for(var i = 0; i < children.length; i++) {
+        let settings = document.getElementById("setting-menu");
+        let children = settings.children;
+        for(let i = 0; i < children.length; i++) {
             $(children.item(i)).click(function () {
-                var setting = MENUS[i];
+                let setting = MENUS[i];
 
                 hideSettings();
                 setting.invoke();
@@ -115,7 +115,7 @@ function setupSettings() {
 
 function setupToggles() {
     $(function () {
-        var visibility = document.getElementById("visibility");
+        let visibility = document.getElementById("visibility");
         $(visibility).click(function () {
             if(VISIBLE) {
                 if(MENU_OPENED) {
@@ -162,9 +162,9 @@ function setupToggles() {
 
 function setupPickers() {
     $(function () {
-        var pickers = document.getElementById("picker");
-        var children = pickers.children;
-        for(var i = 0; i < children.length; i++) {
+        let pickers = document.getElementById("picker");
+        let children = pickers.children;
+        for(let i = 0; i < children.length; i++) {
             $(children.item(i)).click(function () {
                 transition(i);
             });
@@ -174,14 +174,14 @@ function setupPickers() {
 
 function setupBackgrounds() {
     $(function () {
-        var backgrounds = document.getElementById("backgrounds");
-        var children = backgrounds.children;
-        for(var i = 0; i < children.length; i++) {
+        let backgrounds = document.getElementById("backgrounds");
+        let children = backgrounds.children;
+        for(let i = 0; i < children.length; i++) {
             $(children.item(i)).click(function () {
-                var background = BACKGROUNDS[i];
-                var cssList = getCSSList();
-                for(var j = 0; j < cssList.length; j++) {
-                    var css = cssList[j];
+                let background = BACKGROUNDS[i];
+                let cssList = getCSSList();
+                for(let j = 0; j < cssList.length; j++) {
+                    let css = cssList[j];
                     $(".card-container").removeClass(css);
                     $(".card-picker-item").removeClass(css);
                 }
@@ -207,11 +207,11 @@ function setupBackgrounds() {
 
 function setupTypographys() {
     $(function () {
-        var typographys = document.getElementById("typographys");
-        var children = typographys.children;
-        for(var i = 0; i < children.length; i++) {
+        let typographys = document.getElementById("typographys");
+        let children = typographys.children;
+        for(let i = 0; i < children.length; i++) {
             $(children.item(i)).click(function () {
-                var typography = TYPOGRAPHYS[i];
+                let typography = TYPOGRAPHYS[i];
                 $(".card-container").css({
                     color: typography.getColor()
                 });
@@ -245,19 +245,19 @@ function transition(toIndex) {
 
         return;
     }
-    var previous = CONTENT_INDEX;
+    let previous = CONTENT_INDEX;
     setReadmoreState(false);
 
     CONTENT_INDEX = toIndex;
-    for(var i = 0; i < CONTENTS.length; i++) {
+    for(let i = 0; i < CONTENTS.length; i++) {
         $("#card-" + i).css({
             transform: "translateY(-" + (800 * CONTENT_INDEX) + "px)"
         });
     }
-    var readmore = document.getElementById("readmore");
+    let readmore = document.getElementById("readmore");
     document.getElementById("card-" + previous).removeChild(readmore);
 
-    var elReadMore = document.createElement("div");
+    let elReadMore = document.createElement("div");
     elReadMore.setAttribute("id", "readmore");
     elReadMore.innerHTML = "<h5>READ MORE</h5>";
     document.getElementById("card-" + CONTENT_INDEX).appendChild(elReadMore);
@@ -281,10 +281,10 @@ function transition(toIndex) {
 }
 
 function refreshReadmore() {
-    var readmore = document.getElementById("readmore");
+    let readmore = document.getElementById("readmore");
     readmore.onclick = function (event) {
-        var container = document.getElementById("card-" + CONTENT_INDEX);
-        var content = container.firstChild;
+        let container = document.getElementById("card-" + CONTENT_INDEX);
+        let content = container.firstChild;
         if(OPENED) {
             container.style.width = "500px";
             content.style.width = "400px";
@@ -303,9 +303,9 @@ function refreshReadmore() {
 }
 
 function setReadmoreState(open) {
-    var readmore = document.getElementById("readmore");
-    var container = document.getElementById("card-" + CONTENT_INDEX);
-    var content = container.firstChild;
+    let readmore = document.getElementById("readmore");
+    let container = document.getElementById("card-" + CONTENT_INDEX);
+    let content = container.firstChild;
     if(open) {
         container.style.width = "900px";
         content.style.width = "800px";
@@ -323,19 +323,19 @@ function setReadmoreState(open) {
 }
 
 function loadContents() {
-    var temp = document.getElementById("temp");
-    for(var i = 0; i < THREADS.length; i++) {
-        var div = document.createElement("div");
+    let temp = document.getElementById("temp");
+    for(let i = 0; i < THREADS.length; i++) {
+        let div = document.createElement("div");
         temp.appendChild(div);
 
-        var url = "threads/" + THREADS[i];
+        let url = "threads/" + THREADS[i];
 
         $(div).load(url);
 
         CONTENTS[i] = new Content(div);
 
-        var children = temp.children;
-        for(var j = 0; j < children.length; j++) {
+        let children = temp.children;
+        for(let j = 0; j < children.length; j++) {
             temp.removeChild(children.item(j));
         }
     }
@@ -347,8 +347,8 @@ function loadContents() {
 
 function showPickers() {
     PICKERS_OPENED = true;
-    for(var i = 0; i < PICKERS.length; i++) {
-        var item = PICKERS[i];
+    for(let i = 0; i < PICKERS.length; i++) {
+        let item = PICKERS[i];
         setTimeout(function () {
             if(!PICKERS_OPENED) {
                 return;
@@ -361,22 +361,22 @@ function showPickers() {
 
 function hidePickers() {
     PICKERS_OPENED = false;
-    for(var i = 0; i < PICKERS.length; i++) {
-        var item = PICKERS[i];
+    for(let i = 0; i < PICKERS.length; i++) {
+        let item = PICKERS[i];
         setTimeout(function () {
             if(PICKERS_OPENED) {
                 return;
             }
-            item.getItem().style.top = "2000px";
+            item.getItem().style.top = "1000px";
             item.getItem().style.opacity = "0";
         }, ((PICKERS.length - 1 - i) + 1) * 50);
     }
 }
 
 function loadPickers() {
-    var picker = document.getElementById("picker");
-    for(var i = 0; i < CONTENTS.length; i++) {
-        var item = document.createElement("div");
+    let picker = document.getElementById("picker");
+    for(let i = 0; i < CONTENTS.length; i++) {
+        let item = document.createElement("div");
         item.setAttribute("class", "card-picker-item");
         item.innerHTML = i + 1;
         item.style.top = "1000px";
@@ -393,8 +393,8 @@ function loadPickers() {
 
 function showBackgrounds() {
     BACKGROUNDS_OPENED = true;
-    for(var i = 0; i < BACKGROUNDS.length; i++) {
-        var item = BACKGROUNDS[i];
+    for(let i = 0; i < BACKGROUNDS.length; i++) {
+        let item = BACKGROUNDS[i];
         setTimeout(function () {
             if(!BACKGROUNDS_OPENED) {
                 return;
@@ -407,27 +407,26 @@ function showBackgrounds() {
 
 function hideBackgrounds() {
     BACKGROUNDS_OPENED = false;
-    for(var i = 0; i < BACKGROUNDS.length; i++) {
-        var item = BACKGROUNDS[i];
+    for(let i = 0; i < BACKGROUNDS.length; i++) {
+        let item = BACKGROUNDS[i];
         setTimeout(function () {
             if(BACKGROUNDS_OPENED) {
                 return;
             }
-            item.getItem().style.top = "2000px";
+            item.getItem().style.top = "1000px";
             item.getItem().style.opacity = "0";
         }, ((BACKGROUNDS.length - 1 - i) + 1) * 50);
     }
 }
 
 function loadBackgrounds() {
-    var backgrounds = document.getElementById("backgrounds");
-    for(var i = 0; i < BACKGROUNDS.length; i++) {
-        var item = document.createElement("div");
+    let backgrounds = document.getElementById("backgrounds");
+    for(let i = 0; i < BACKGROUNDS.length; i++) {
+        let item = document.createElement("div");
 
-        var background = BACKGROUNDS[i];
+        let background = BACKGROUNDS[i];
         item.setAttribute("class", "card-background-item");
-        item.style.top = "2000px";
-        item.style.background = background.getColor();
+        item.style.top = "1000px";
         if(background.getColor() != null) {
             item.style.background = background.getColor();
         } else if(background.getCSS() != null) {
@@ -444,13 +443,13 @@ function loadBackgrounds() {
 // =====================
 
 function loadTypographys() {
-    var typographys = document.getElementById("typographys");
-    for(var i = 0; i < TYPOGRAPHYS.length; i++) {
-        var item = document.createElement("div");
+    let typographys = document.getElementById("typographys");
+    for(let i = 0; i < TYPOGRAPHYS.length; i++) {
+        let item = document.createElement("div");
 
-        var typography = TYPOGRAPHYS[i];
+        let typography = TYPOGRAPHYS[i];
         item.setAttribute("class", "card-typography-item");
-        item.style.top = "2000px";
+        item.style.top = "1000px";
         item.style.background = typography.getColor();
 
         typography.setData(item, (i * 60) + 100);
@@ -460,8 +459,8 @@ function loadTypographys() {
 
 function showTypographys() {
     TYPOGRAPHYS_OPENED = true;
-    for(var i = 0; i < TYPOGRAPHYS.length; i++) {
-        var item = TYPOGRAPHYS[i];
+    for(let i = 0; i < TYPOGRAPHYS.length; i++) {
+        let item = TYPOGRAPHYS[i];
         setTimeout(function () {
             if(!TYPOGRAPHYS_OPENED) {
                 return;
@@ -474,13 +473,13 @@ function showTypographys() {
 
 function hideTypographys() {
     TYPOGRAPHYS_OPENED = false;
-    for(var i = 0; i < TYPOGRAPHYS.length; i++) {
-        var item = TYPOGRAPHYS[i];
+    for(let i = 0; i < TYPOGRAPHYS.length; i++) {
+        let item = TYPOGRAPHYS[i];
         setTimeout(function () {
             if(TYPOGRAPHYS_OPENED) {
                 return;
             }
-            item.getItem().style.top = "2000px";
+            item.getItem().style.top = "1000px";
             item.getItem().style.opacity = "0";
         }, ((TYPOGRAPHYS.length - 1 - i) + 1) * 50);
     }
@@ -493,17 +492,17 @@ function hideTypographys() {
 function hideSettings() {
     MENU_OPENED = false;
 
-    var returns = document.getElementById("return");
+    let returns = document.getElementById("return");
     returns.style.opacity = "1";
     RETURN_BACK = true;
 
-    for(var i = 0; i < MENUS.length; i++) {
-        var item = MENUS[i];
+    for(let i = 0; i < MENUS.length; i++) {
+        let item = MENUS[i];
         setTimeout(function () {
             if(MENU_OPENED) {
                 return;
             }
-            item.getItem().style.top = "2000px";
+            item.getItem().style.top = "1000px";
             item.getItem().style.opacity = "0";
         }, ((MENUS.length - 1 - i) + 1) * 50);
     }
@@ -512,12 +511,12 @@ function hideSettings() {
 function showSettings() {
     MENU_OPENED = true;
 
-    var returns = document.getElementById("return");
+    let returns = document.getElementById("return");
     returns.style.opacity = "0";
     RETURN_BACK = false;
 
-    for(var i = 0; i < MENUS.length; i++) {
-        var item = MENUS[i];
+    for(let i = 0; i < MENUS.length; i++) {
+        let item = MENUS[i];
         setTimeout(function () {
             if(!MENU_OPENED) {
                 return;
@@ -529,13 +528,13 @@ function showSettings() {
 }
 
 function loadSettings() {
-    var settings = document.getElementById("setting-menu");
-    for(var i = 0; i < MENUS.length; i++) {
-        var item = document.createElement("div");
+    let settings = document.getElementById("setting-menu");
+    for(let i = 0; i < MENUS.length; i++) {
+        let item = document.createElement("div");
 
-        var setting = MENUS[i];
+        let setting = MENUS[i];
         item.setAttribute("class", "menu-item");
-        item.style.top = "2000px";
+        item.style.top = "1000px";
         item.innerHTML = setting.getDisplayName();
 
         setting.setData(item, (i * 45) + 100);
@@ -549,22 +548,22 @@ function loadSettings() {
 // ==================
 
 function loadWrappers() {
-    var wrapper = document.getElementById("wrapper");
-    for(var i = 0; i < CONTENTS.length; i++) {
-        var content = CONTENTS[i];
+    let wrapper = document.getElementById("wrapper");
+    for(let i = 0; i < CONTENTS.length; i++) {
+        let content = CONTENTS[i];
 
-        var elContainer = document.createElement("div");
+        let elContainer = document.createElement("div");
         elContainer.setAttribute("class", "card-container");
         elContainer.setAttribute("id", "card-" + i);
         wrapper.appendChild(elContainer);
 
-        var elContent = document.createElement("div");
+        let elContent = document.createElement("div");
         elContent.setAttribute("class", "card-content");
         elContent.appendChild(content.getContent());
         elContainer.appendChild(elContent);
 
         if (i == CONTENT_INDEX) {
-            var elReadMore = document.createElement("div");
+            let elReadMore = document.createElement("div");
             elReadMore.setAttribute("id", "readmore");
             elReadMore.innerHTML = "<h5>READ MORE</h5>";
             elContainer.appendChild(elReadMore);
