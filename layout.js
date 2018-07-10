@@ -25,6 +25,10 @@ let BACKGROUNDS = [
     new Background("FFD0BA", "#ffd0ba", null, null),
     new Background("A3CCA3", "#A3CCA3", null, null),
     new Background("D6E6F5", "#D6E6F5", null, null),
+    new Background("F1A1CA", "#f1a1ca", null, null),
+    new Background("E8FFD1", "#e8ffd1", null, null),
+    new Background("A1A2F1", "#a1a2f1", null, null),
+    new Background("FFFBF7", "#fffbf7", null, null),
 ];
 let BACKGROUNDS_OPENED = false;
 
