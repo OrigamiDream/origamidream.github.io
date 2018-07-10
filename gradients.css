@@ -1,0 +1,55 @@
+/* Background Gradient for Triadic Colors */
+.pink-to-lime
+{
+    background-color: #E8FFD1;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #E8FFD1 -webkit-gradient(linear, left top, left bottom, from(#F1A1CA), to(#E8FFD1)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #E8FFD1 -moz-linear-gradient(top, #F1A1CA, #E8FFD1) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F1A1CA, endColorstr=#E8FFD1) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F1A1CA, endColorstr=#F1A1CA)" no-repeat;
+}
+
+/* Background Gradient for Analagous Colors */
+.blue-to-aqua
+{
+    background-color: #A1F1F0;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #A1F1F0 -webkit-gradient(linear, left top, left bottom, from(#A1BDF1), to(#A1F1F0)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #A1F1F0 -moz-linear-gradient(top, #A1BDF1, #A1F1F0) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#A1BDF1, endColorstr=#A1F1F0) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#A1BDF1, endColorstr=#A1BDF1)" no-repeat;
+}
+
+/* Background Gradient for Complementary Colors */
+.orange-to-white
+{
+    background-color: #FFFFFF;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#F1C8A1), to(#FFFFFF)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #FFFFFF -moz-linear-gradient(top, #F1C8A1, #FFFFFF) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#F1C8A1, endColorstr=#FFFFFF) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F1C8A1, endColorstr=#F1C8A1)" no-repeat;
+}
+
+/* Background Gradient for Monochromatic Colors */
+.skyblue-to-white
+{
+    background-color: #FFFFFF;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#699BCB), to(#FFFFFF)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #FFFFFF -moz-linear-gradient(top, #699BCB, #FFFFFF) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#699BCB, endColorstr=#FFFFFF) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#699BCB, endColorstr=#699BCB)" no-repeat;
+}

@@ -1,31 +1,27 @@
-class Typography {
+function Typography(displayName, color) {
+    this.displayName = displayName;
+    this.color = color;
+    this.item = null;
+    this.top = null;
+}
 
-    constructor(displayName, color) {
-        this.displayName = displayName;
-        this.color = color;
-        this.item = null;
-        this.top = null;
-    }
+Typography.prototype.getDisplayName = function() {
+    return this.displayName;
+}
 
-    getDisplayName() {
-        return this.displayName;
-    }
+Typography.prototype.getColor = function() {
+    return this.color;
+}
 
-    getColor() {
-        return this.color;
-    }
+Typography.prototype.setData = function(item, top) {
+    this.item = item;
+    this.top = top;
+}
 
-    setData(item, top) {
-        this.item = item;
-        this.top = top;
-    }
+Typography.prototype.getTop = function() {
+    return this.top;
+}
 
-    getTop() {
-        return this.top;
-    }
-
-    getItem() {
-        return this.item;
-    }
-
+Typography.prototype.getItem = function() {
+    return this.item;
 }

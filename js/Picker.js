@@ -1,19 +1,17 @@
-class Picker {
-    constructor(top, index, item) {
-        this.top = top;
-        this.index = index;
-        this.item = item;
-    }
+function Picker(top, index, item) {
+    this.top = top;
+    this.index = index;
+    this.item = item;
+}
 
-    getTop() {
-        return this.top;
-    }
+Picker.prototype.getTop = function() {
+    return this.top;
+}
 
-    getIndex() {
-        return this.index;
-    }
+Picker.prototype.getIndex = function() {
+    return this.index;
+}
 
-    getItem() {
-        return this.item;
-    }
+Picker.prototype.getItem = function() {
+    return this.item;
 }

@@ -4,7 +4,8 @@
 }
 
 body {
-    background: rgba(204, 88, 255, 0.04);
+    /*background: rgba(204, 88, 255, 0.04);*/
+    background: rgb(82, 86, 89);
     overflow: hidden;
 }
 
@@ -101,7 +102,7 @@ body {
     padding: 50px;
     background: white;
     box-sizing: border-box;
-    box-shadow: grey 5px 5px 10px 5px;
+    /*box-shadow: grey 5px 5px 10px 5px;*/
     opacity: 1;
 
     -webkit-transition: opacity 0.2s, transform 1s, width 0.5s ease-in-out, background 0.2s;
@@ -177,7 +178,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: grey 2px 2px 5px 2px;
+    /*box-shadow: grey 2px 2px 5px 2px;*/
     padding-top: 2px;
 
 
@@ -214,7 +215,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: grey 2px 2px 5px 2px;
+    /*box-shadow: grey 2px 2px 5px 2px;*/
     padding-top: 2px;
 
 
@@ -248,7 +249,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: grey 2px 2px 5px 2px;
+    /*box-shadow: grey 2px 2px 5px 2px;*/
     padding-top: 2px;
 
 
@@ -281,7 +282,7 @@ body {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    box-shadow: grey 2px 2px 5px 2px;
+    /*box-shadow: grey 2px 2px 5px 2px;*/
     padding: 5px;
 
 
@@ -315,7 +316,7 @@ body {
     text-align: center;
     font-size: 10px;
     font-weight: bold;
-    box-shadow: grey 2px 2px 5px 2px;
+    /*box-shadow: grey 2px 2px 5px 2px;*/
     padding: 5px;
 
 
@@ -349,7 +350,7 @@ body {
     text-align: center;
     font-size: 10px;
     font-weight: bold;
-    box-shadow: grey 2px 2px 5px 2px;
+    /*box-shadow: grey 2px 2px 5px 2px;*/
     padding: 5px;
 
 

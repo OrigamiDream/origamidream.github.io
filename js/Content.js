@@ -1,9 +1,7 @@
-class Content {
-    constructor(content) {
-        this.content = content;
-    }
+function Content(content) {
+    this.content = content;
+}
 
-    getContent() {
-        return this.content;
-    }
+Content.prototype.getContent = function() {
+    return this.content;
 }

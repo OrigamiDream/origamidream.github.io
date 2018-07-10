@@ -1,48 +1,40 @@
-class Background {
+function Background(displayName, color, css, img, repeat) {
+    this.displayName = displayName;
+    this.color = color;
+    this.img = img;
+    this.css = css;
+    this.repeat = repeat;
+}
 
-    /**
-     * A constructor for background settings
-     *
-     * @param {string} display name
-     * @param {string} color
-     * @param {string} img url
-     * @param {string} css-style repeat
-     */
-    constructor(displayName, color, img, repeat) {
-        this.displayName = displayName;
-        this.color = color;
-        this.img = img;
-        this.repeat = repeat;
-        this.item = null;
-        this.top = null;
-    }
+Background.prototype.getDisplayName = function() {
+    return this.displayName;
+}
 
-    getDisplayName() {
-        return this.displayName;
-    }
+Background.prototype.getCSS = function() {
+    return this.css;
+}
 
-    getColor() {
-        return this.color;
-    }
+Background.prototype.getColor = function() {
+    return this.color;
+}
 
-    getImg() {
-        return this.color;
-    }
+Background.prototype.getImg = function() {
+    return this.img;
+}
 
-    getRepeat() {
-        return this.repeat;
-    }
+Background.prototype.getRepeat = function() {
+    return this.repeat;
+}
 
-    setData(item, top) {
-        this.item = item;
-        this.top = top;
-    }
+Background.prototype.setData = function(item, top) {
+    this.item = item;
+    this.top = top;
+}
 
-    getTop() {
-        return this.top;
-    }
+Background.prototype.getTop = function() {
+    return this.top;
+}
 
-    getItem() {
-        return this.item;
-    }
+Background.prototype.getItem = function() {
+    return this.item;
 }
